@@ -1,0 +1,6 @@
+*.aux
+*.log
+*.gz
+__pycache__
+commits.txt
+test.py
