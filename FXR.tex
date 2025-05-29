@@ -1,18 +1,89 @@
-\documentclass{article}    
-\usepackage[utf8]{inputenc}
-\usepackage{graphicx}      % Add this line for image support
+\documentclass[11pt, twoside, a4paper]{article}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[margin=1in, headheight=5mm]{geometry}
+\usepackage{graphicx}
+\usepackage[nocheck]{fancyhdr}
+\usepackage{tabto}
+\usepackage{hyperref}
 
-\title{FXR SOP}
-\author{L3 Systems}
-\date{May 28th 2025}
+\definecolor{HBlue}{RGB}{0, 45, 114}
+\NumTabs{8}
 
 \begin{document}
 
+\pagenumbering{roman}
+\title{-------- HyFIRE L3 FXR System -------- Standard Operating Procedure}
+\author{Malone G07}
+\date{2025}
 \maketitle
 
-\section{Introduction}
+\begin{figure}
+        \centering
+        \includegraphics[width=\linewidth]{Images/FXRexample.png}
+    \end{figure}
 
-This SOP details the operation of the FXR system in the HyFIRE facility. The FXR system is used to create an X-Ray image of a target before, during, or after an experiment in the terminal tank. 
-Images from the FXR system are collected using phosphor screens and then processed using the Duerr NDT HR ScanX scanner to create a digital image. 
+\begin{figure}
+    \begin{center}
+        \includegraphics[height=3cm]{Images/HEMI_Logo.png}
+    \end{center}
+\end{figure}
+
+\newpage
+\pagenumbering{arabic}
+\pagestyle{fancy}
+\fancyhead[L]{\includegraphics[height=10mm]{Images/JHU.logo_horizontal.blue.png}}
+\fancyfoot[C]{\thepage}
+\tableofcontents
+\newpage
+
+\section{Introduction}
+    This SOP details the procedures for using the HyFIRE L3 FXR system. The FXR system creates X-Ray images of an object in the 
+terminal chamber recorded on a phosphor screen using a pulsed X-Ray source. The phosphor screen is then digitized
+using the NDT HR Scanner. This operating procedure will detail initial setup of the system, triggering the X-Ray source, and recording the image. The power supply rack consists of the high voltage power supply, using the NDT HR Scanner. This operating procedure will detail initial setup of the system, triggering the X-Ray source, and recording the image. 
+
+\section{Hardware}
+
+The main components of the FXR system are the power supply rack, pulsers, high voltage cable, vacuum tubes, and remote tube head. The power supply rack consists of the high voltage power supply, safety interlock, N2 controls, pulser controls, and storage shelving for the phosphor screens and vacuum tubes.  
+
+\begin{figure}[h]
+    % First row
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{Images/IMG_5377.jpg}
+        \caption{Power supply rack}
+        \label{fig:rack}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{Images/IMG_5378.jpg}
+        \caption{Pulser in single output mode}
+        \label{fig:pulser}
+    \end{minipage}
+
+    \vspace{1cm} % Add vertical space between rows
+    
+    % Second row
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{Images/IMG_5379.jpg}
+        \caption{Vacuum tubes}
+        \label{fig:tubes}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{Images/RemoteTubeHead_Tank.jpg}
+        \caption{Remote tube heads mounted on terminal tank}
+        \label{fig:RT_on_tank}
+    \end{minipage}
+\end{figure}
+
+\section{Hazards} 
+The FXR system produces ionizing radiation. The highest amount of radiation produced is near the source (remote tube head). \textbf{The system should only be fired from the control room (Malone G03).} For troubleshooting resistive loads can be used in place of the flash tubes so that the system can be triggered without producing X-Rays. \textbf{The system should never be fired in the open circuit (no load) configuration.}
+
+\section{Single or Dual Output}
+The FXR system consists of three pulsers that can be operated either in single or dual output mode. In single output mode, the system outputs X-Rays from
+a single remote tube head while in dual output mode both remote tube heads fired simultaneously. The appropriate vacuum X-Ray tubes or resistive loads for single or dual output mode must be installed in the remote tube head before operation. For operation of a single pulser (single or dual output) one charge/isolating resistor (100 kOhm) must be connected. For multiple pulsers each subsequent charge/isolating resistor (10 MOhm) must be connected by jumper cable. The charge/isolating resistors can be access from the back panel of the power supply rack.
 
 \end{document}

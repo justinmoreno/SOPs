@@ -1,6 +1,10 @@
 *.aux
 *.log
 *.gz
+*.out
+*.toc
+*.dvi
+/Images
 __pycache__
 commits.txt
 test.py
